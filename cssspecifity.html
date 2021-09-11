@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity</title>
+    <style>
+        body{
+            color: lawngreen;
+        }
+        .class1 a{
+            color: inherit;
+        }
+        .class2 a{
+            color: initial;
+        }
+        .class3 a{
+            color: unset;
+        }
+        h1{
+            color: red !important;
+        }
+        .box{
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            overflow:auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>default<a href="">link</a></li>
+        <li class="class1">inherited<a href="">link</a></li>
+        <li class="class2">initial<a href="">link</a></li>
+        <li class="class3">unset<a href="">link</a></li>
+    </ul>
+    <h1 style="color: lightcoral;">important</h1>
+
+    <div>
+        <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit beatae sint eligendi dignissimos veniam commodi, eos labore dolores sit, delectus, sunt ipsa laudantium quasi reprehenderit qui alias! Incidunt, cupiditate aspernatur?</p>
+
+        <p>out of box</p>
+    </div>
+    
+</body>
+</html>
